@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人知識庫 - 資料庫應用筆記</title>
+  <link rel="stylesheet" href="./css/style.css?v=3">
+  <!-- CDN 載入 marked.js，若無網路或本地離線，app.js 內建簡易解析備援 -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body data-theme="system">
+  <!-- 頂部導覽列 -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-area" id="brand-home" title="返回筆記首頁">
+        <span class="brand-icon">📚</span>
+        <h1 class="brand-title">個人筆記整理庫</h1>
+      </div>
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="搜尋筆記標題、標籤或關鍵字..." autocomplete="off">
+        <button id="search-clear" class="btn-clear hidden" title="清除搜尋">&times;</button>
+      </div>
+      <div class="actions-area">
+        <button id="theme-toggle" class="btn-theme" title="切換深淺色主題">
+          <span class="theme-icon">🌓</span>
+          <span class="theme-label">主題</span>
+        </button>
+      </div>
+    </div>
+    <!-- 分類篩選列 -->
+    <nav class="category-nav">
+      <div class="category-container" id="category-pills">
+        <!-- 分類藥丸按鈕由 app.js 動態注入 -->
+      </div>
+    </nav>
+  </header>
+
+  <!-- 主內容區域 -->
+  <main class="main-content">
+    <!-- 首頁：卡片網格視圖 -->
+    <section id="view-grid" class="view-section active">
+      <div class="grid-header">
+        <h2 id="grid-title">所有主題筆記</h2>
+        <span id="grid-count" class="badge-count">0 篇</span>
+      </div>
+      <div id="notes-grid" class="cards-grid">
+        <!-- 筆記卡片由 app.js 動態注入 -->
+      </div>
+      <div id="empty-state" class="empty-state hidden">
+        <p>沒有找到符合條件的筆記。</p>
+      </div>
+    </section>
+
+    <!-- 內文：單篇筆記閱讀視圖 -->
+    <section id="view-reading" class="view-section hidden">
+      <div class="reading-toolbar">
+        <button id="btn-back" class="btn-back">
+          <span class="arrow">&larr;</span> 返回卡片列表
+        </button>
+      </div>
+      <article class="article-container">
+        <header class="article-header">
+          <div class="article-meta-top">
+            <span id="art-category" class="badge-category">分類</span>
+            <time id="art-date" class="meta-date">日期</time>
+          </div>
+          <h1 id="art-title" class="article-title">筆記標題</h1>
+          <div id="art-tags" class="article-tags"></div>
+        </header>
+        <div id="art-body" class="markdown-body">
+          <!-- Markdown 渲染內容由 app.js 動態載入 -->
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>純靜態個人筆記網站 &bull; 託管於 GitHub Pages &bull; 符合 AGENTS.md 規範</p>
+  </footer>
+
+  <script src="./js/app.js?v=3"></script>
+</body>
+</html>

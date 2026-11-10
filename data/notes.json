@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "sql-division-not-exists",
+    "path": "2026-10-14-sql-division-not-exists.md",
+    "title": "相關巢狀查詢與「對所有（For All）」條件：NOT EXISTS 與 EXCEPT",
+    "date": "2026-10-14",
+    "category": "進階 SQL",
+    "tags": ["SQL", "EXISTS", "NOT EXISTS", "EXCEPT", "集合除法", "全稱量化"],
+    "summary": "探討使用 correlated query 逐列比對，並透過雙重否定（NOT EXISTS 搭配 EXCEPT 差集為空）實現全稱量化（For All / 集合除法）查詢。"
+  },
+  {
+    "slug": "sql-joined-tables-and-outer-joins",
+    "path": "2026-10-14-sql-joined-tables-and-outer-joins.md",
+    "title": "SQL 合併表與外部合併：INNER、LEFT、RIGHT 與 FULL OUTER JOIN",
+    "date": "2026-10-14",
+    "category": "進階 SQL",
+    "tags": ["SQL", "JOIN", "INNER JOIN", "OUTER JOIN", "LEFT JOIN", "自我合併"],
+    "summary": "全面剖析在 FROM 子句中宣告合併條件、NATURAL JOIN 的風險、四種 JOIN 保留哪一側與 NULL 填補，以及自我合併處理層級主管。"
+  },
+  {
+    "slug": "sql-null-and-three-valued-logic",
+    "path": "2026-10-14-sql-null-and-three-valued-logic.md",
+    "title": "SQL 中的 NULL 值與三值邏輯（Three-Valued Logic）",
+    "date": "2026-10-14",
+    "category": "進階 SQL",
+    "tags": ["SQL", "NULL", "三值邏輯", "UNKNOWN", "IS NULL"],
+    "summary": "解析 SQL 中 NULL 的三種語義、三值邏輯真值表（AND/OR/NOT），以及為何不能使用 = NULL 而必須使用 IS NULL。"
+  },
+  {
+    "slug": "sql-set-operations",
+    "path": "2026-10-14-sql-set-operations.md",
+    "title": "SQL 集合運算：UNION、INTERSECT 與 EXCEPT",
+    "date": "2026-10-14",
+    "category": "進階 SQL",
+    "tags": ["SQL", "集合運算", "UNION", "EXCEPT", "INTERSECT"],
+    "summary": "探討 SQL 中的聯集、交集與差集運算機制，以及查詢結果必須滿足聯集相容性（union-compatible）與去重規則。"
+  },
+  {
+    "slug": "sql-nested-queries",
+    "path": "2026-10-14-sql-nested-queries.md",
+    "title": "SQL 巢狀查詢與集合成員比對（IN, ANY, ALL）",
+    "date": "2026-10-14",
+    "category": "進階 SQL",
+    "tags": ["SQL", "巢狀查詢", "子查詢", "IN", "ANY", "ALL", "相關子查詢"],
+    "summary": "說明外層查詢與子查詢的嵌套結構，值組比較語法，以及使用 IN、= ANY、> ALL 與相關子查詢進行多值比對。"
+  },
+  {
+    "slug": "sql-aggregates-and-grouping",
+    "path": "2026-10-14-sql-aggregates-and-grouping.md",
+    "title": "SQL 聚合函數與資料分組：GROUP BY、HAVING 與執行順序",
+    "date": "2026-10-14",
+    "category": "進階 SQL",
+    "tags": ["SQL", "GROUP BY", "HAVING", "聚合函數", "WITH", "CASE", "執行順序"],
+    "summary": "整理 COUNT/SUM/AVG 聚合計算、GROUP BY 分組規範、WHERE 與 HAVING 的關鍵差異，以及 SQL 概念上的 6 階段執行順序。"
+  },
+  {
+    "slug": "sql-assertions-and-triggers",
+    "path": "2026-10-14-sql-assertions-and-triggers.md",
+    "title": "SQL 完整性限制超越關聯模型：斷言（Assertions）與觸發器（Triggers）",
+    "date": "2026-10-14",
+    "category": "進階 SQL",
+    "tags": ["SQL", "斷言", "觸發器", "ECA", "主動式資料庫", "CHECK"],
+    "summary": "探討複雜業務規則的宣告方式：CREATE ASSERTION 違規查詢防護，以及 CREATE TRIGGER 的事件—條件—動作（ECA）主動式資料庫架構。"
+  },
+  {
+    "slug": "sql-views-virtual-tables",
+    "path": "2026-10-14-sql-views-virtual-tables.md",
+    "title": "SQL 視圖（Views）：虛擬表定義、實作原理、更新限制與存取控制",
+    "date": "2026-10-14",
+    "category": "進階 SQL",
+    "tags": ["SQL", "View", "視圖", "虛擬表", "實體化視圖", "存取控制"],
+    "summary": "解析視圖作為虛擬表的概念，DBMS 的查詢修改與實體化實作、可更新視圖的嚴格限制（單表、無聚合、含 PK），以及作為資料存取控制的機制。"
+  },
+  {
+    "slug": "sql-schema-modification",
+    "path": "2026-10-14-sql-schema-modification.md",
+    "title": "SQL 綱要修改（Schema Modification）：DROP 與 ALTER TABLE",
+    "date": "2026-10-14",
+    "category": "進階 SQL",
+    "tags": ["SQL", "DDL", "DROP", "ALTER TABLE", "CASCADE", "RESTRICT"],
+    "summary": "說明資料庫運作中綱要的動態調整：DROP 的 CASCADE 與 RESTRICT 相依處理，以及 ALTER TABLE 的欄位增刪、預設值與約束修改。"
+  },
+  {
+    "slug": "sql-university-exercise-and-summary",
+    "path": "2026-10-14-sql-university-exercise-and-summary.md",
+    "title": "進階 SQL 實作練習與重點總結（UNIVERSITY 資料庫）",
+    "date": "2026-10-14",
+    "category": "實作練習",
+    "tags": ["SQL", "實作練習", "UNIVERSITY", "練習題", "總結"],
+    "summary": "UNIVERSITY 資料庫之 8 大進階 SQL 練習題目標準解析（含排序、外合併、NOT IN、GROUP BY、視圖與綱要修改）與重點歸納。"
+  }
+]
